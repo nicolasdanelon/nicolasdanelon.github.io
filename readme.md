@@ -1,1 +1,1 @@
-nicolasdanelon.github.io
+http://nicolasdanelon.github.io
