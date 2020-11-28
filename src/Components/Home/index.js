@@ -1,7 +1,7 @@
-import './styles.css';
+import './styles.sass';
+
 import Header from '../Header';
 import Footer from '../Footer';
-import React from 'react';
 
 const Index = () => {
   return (
