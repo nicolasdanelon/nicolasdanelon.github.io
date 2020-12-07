@@ -1,3 +1,4 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import './styles.sass';
 
 const Footer = () => (
@@ -9,7 +10,7 @@ const Footer = () => (
            target="_blank"
            rel="noreferrer"
         >
-          Nicolas Danelon
+          Nicolás Danelón
         </a>
       </p>
       <p className="right">
@@ -17,7 +18,7 @@ const Footer = () => (
            target="_blank"
            rel="noreferrer"
         >
-          View the source code
+          View the source code <FontAwesomeIcon icon="code" />
         </a>
       </p>
     </div>

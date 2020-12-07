@@ -1,68 +1,35 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import * as brands from '@fortawesome/free-brands-svg-icons' // @fortawesome/free-regular-svg-icons
+import IconBox from "./IconBox";
+import { tools, languages } from './data';
 import './styles.sass';
 
-const Icon = (resource, label) => {
-  return (
-    <div className="icon-box">
-      <FontAwesomeIcon icon={resource} style={{fontSize: '80px'}}/>
-      <p className="icon-box">
-        {label}
-      </p>
-    </div>
-  )
+const randomize = (array) => {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+  return array;
 }
 
 const Body = () => (
-  <div className="body">
-    <h3>Things I use</h3>
-    <div className="wrapper">
-      <div className="icon-box">
-        <FontAwesomeIcon icon={brands.faLinux} style={{ fontSize: '80px' }} />
-        <p>Linux</p>
-      </div>
-      <div className="icon-box">
-        <FontAwesomeIcon icon={brands.faAws} style={{ fontSize: '80px' }} />
-        <p>AWS</p>
-      </div>
-      <div className="icon-box">
-        <FontAwesomeIcon icon={brands.faLinode} style={{ fontSize: '80px' }} />
-        <p>Linode</p>
-      </div>
-      <div className="icon-box">
-        <FontAwesomeIcon icon={brands.faDocker} style={{ fontSize: '80px' }} />
-        <p>Docker</p>
-      </div>
-    </div>
+  <>
+    {/*<div className="container">
+      <h3>Hi, I write webapps</h3>
+    </div>*/}
 
-    <h3>Languages I know</h3>
-    <div className="wrapper">
-      <div className="icon-box">
-        <FontAwesomeIcon icon={brands.faReact} style={{ fontSize: '80px' }} />
-        <p>React</p>
-      </div>
-      <div className="icon-box">
-        <FontAwesomeIcon icon={brands.faNode} style={{ fontSize: '80px' }} />
-        <p>Node</p>
-      </div>
-      <div className="icon-box">
-        <FontAwesomeIcon icon={brands.faJs} style={{ fontSize: '80px' }} />
-        <p>Javascript</p>
-      </div>
-      <div className="icon-box">
-        <FontAwesomeIcon icon={brands.faPhp} style={{ fontSize: '80px' }} />
-        <p>php</p>
+    <div className="body">
+      <h3>Frameworks, libraries, languages and tools I use</h3>
+        <div className="wrapper">
+        {randomize([...tools, ...languages]).map((item, index) => (
+          <IconBox
+            key={`tools_${index}_${item.label.toLowerCase()}`}
+            resource={item.icon}
+            label={item.label}
+            color={item.color}
+          />
+        ))}
       </div>
     </div>
-
-    <h3>Things I use</h3>
-    <div className="wrapper">
-      <div className="icon-box">
-        <FontAwesomeIcon icon={brands.faLaravel} style={{ fontSize: '80px' }} />
-        <p>Laravel</p>
-      </div>
-    </div>
-  </div>
+  </>
 )
 
 export default Body;
