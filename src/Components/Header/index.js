@@ -9,7 +9,7 @@ const Header = () => {
   const toggleMenu = () => (width === '0%') ? setWidth('100%') : setWidth('0%');
   const subTitle = [
     'Fullstack developer', 'React native developer', 'php hardcore enterprise developer',
-    'Linux lover', 'Open source evangelist', 'I use kafka once', 'I like docker', ''
+    'Linux lover', 'Open source evangelist', 'I\'ve used kafka once', 'I like docker', 'I\'m a retrogamer'
   ];
 
   return (
