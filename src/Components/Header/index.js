@@ -29,10 +29,9 @@ const Header = () => {
       <span className="btn-menu" onClick={() => toggleMenu()}>
         <FontAwesomeIcon icon={ faBars } />
       </span>
-      {/* <a href="mailto:nomorespam@gmail.com"
-         className="btn-contact">
+      <span className="btn-contact" onClick={() => toggleMenu()}>
         📧 Contact me!
-        </a> */}
+      </span>
       <nav className="overlay" style={{ width }}>
         <span className="btn-close" onClick={() => toggleMenu()}>
           <FontAwesomeIcon icon={ faTimes } className="icon" color="#fff" />
