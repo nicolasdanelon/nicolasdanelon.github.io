@@ -17,7 +17,7 @@ export const languages = [
   { icon: brands.faHtml5, label: 'HTML', color: '#e86229' }, // '#dc4d25'
   { icon: brands.faCss3, label: 'CSS', color: '#2862e9' }, // '#254bdd'
   { icon: brands.faPhp, label: 'php', color: '#8892bf' },
-  { icon: brands.faLaravel, label: 'Linux', color: '#ff2d20' },
+  { icon: brands.faLaravel, label: 'Laravel', color: '#ff2d20' },
   { icon: brands.faBootstrap, label: 'Bootstrap', color: '#7952b3' },
   { icon: brands.faAndroid, label: 'Android', color: '#30d780' }
 ];
